@@ -1,13 +1,13 @@
 mode:
   - first: echo Memory
     second: "/usr/bin/free -h | awk '/Mem:/{print $4}'"
-    duration: 10
+    duration: 2
     name: ram
   - first: echo Time
     second: date
-    duration: 10
+    duration: 2
     name: time
   - first: echo я миха
     second: echo линукс
-    duration: 10
-    name: time
+    duration: 2
+    name: example
