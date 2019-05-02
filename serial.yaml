@@ -8,6 +8,6 @@ mode:
     duration: 10
     name: time
   - first: echo я миха
-    second: echo ебашер
+    second: echo линукс
     duration: 10
     name: time
