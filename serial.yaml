@@ -1,13 +1,13 @@
 mode:
   - first: echo Memory
     second: "/usr/bin/free -h | awk '/Mem:/{print $4}'"
-    duration: 2
+    duration: 4
     name: ram
   - first: echo Time
-    second: date
-    duration: 2
+    second: date +%T
+    duration: 4
     name: time
-  - first: echo я миха
-    second: echo линукс
-    duration: 2
-    name: example
+  - first: echo Weather 
+    second: curl -s wttr.in/Moscow?format=1 | egrep -o '[+-][0-9]{1,2}' 
+    duration: 4
+    name: weather

@@ -67,7 +67,7 @@ func main() {
     for {
         for i := range c.Mode {
             send_to_tty(c.Mode[i].First, c.Mode[i].Second)
-            fmt.Println(c.Mode[i])
+            //fmt.Println(c.Mode[i])
             time.Sleep(time.Duration(c.Mode[i].Duration) * time.Second)
         }
 
