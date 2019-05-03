@@ -46,7 +46,8 @@ func exec_shell(cmd string) string {
 }
 
 func send_to_tty(first string, second string) {
-    con := &serial.Config{Name: "/dev/ttyACM0", Baud: 9600}
+    device := exec_shell("ls /dev/serial/by-id/*Arduino*")
+    con := &serial.Config{Name: device, Baud: 9600}
     ser, err := serial.OpenPort(con)
     if err != nil {
        log.Fatal("SEND TO TTY:",err)
